@@ -13,23 +13,17 @@
 
 -   首先，你得安装 node 环境，该工具是基于 node 环境下运行
 
--   然后，你的样式文件符合以下标准，方可使用
+-   然后，打开根目录下的 index.js 文件
 
-```css
-.test {
-    margin: 20px;
-    padding: 8px 15px;
-    word-wrap: break-word;
-    border-radius: 2px;
-}
+```javascript
+// 参数10代表：1rem = 10px
+pxToRem(10);
 ```
 
-注意：每一个 px 单位前都有一个**空格符号**
+-   再将你所有需要转换的样式文件放入 px-styles 中
 
--   最后，将你所有需要转换的样式文件放入 px-styles 中，执行命令：
+-   最后在根目录下执行命令，转换后的文件将输出在 rem-styles 文件夹中
 
 ```javascript
 node index.js
 ```
-
-转换后的文件将输出在 rem-styles 文件夹中

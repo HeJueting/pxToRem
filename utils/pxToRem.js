@@ -18,7 +18,7 @@ function pxToRem(ratio) {
         // 读取文件内容
         let str = fs.readFileSync(file.path, "utf8");
         // 匹配出所有的px内容
-        const pxArr = str.match(/ ([\S]*)px/g);
+        const pxArr = str.match(/([0-9]*|[0-9]*\.[0-9]*)px/g);
         // 将str中所有的pxArr替换成rem
         pxArr.forEach((s) => {
             const remStr = ` ${(parseFloat(s) / ratio).toFixed(2)}rem`;
