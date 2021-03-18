@@ -21,7 +21,7 @@ function pxToRem(ratio) {
         const pxArr = str.match(/([0-9]*|[0-9]*\.[0-9]*)px/g);
         // 将str中所有的pxArr替换成rem
         pxArr.forEach((s) => {
-            const remStr = ` ${(parseFloat(s) / ratio).toFixed(2)}rem`;
+            const remStr = `${(parseFloat(s) / ratio).toFixed(2)}rem`;
             const reg = new RegExp(s);
             str = str.replace(reg, remStr);
         });
